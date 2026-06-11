@@ -5,13 +5,13 @@
 class FinnaCli < Formula
   desc "CLI for finna-app cloud cost management"
   homepage "https://github.com/acarmisc/finna-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/acarmisc/finna-cli/releases/download/v0.1.0/finna_0.1.0_darwin_amd64.tar.gz"
-      sha256 "91175a946dd21ac128e9f027c37766509b3d5a1fc21b5444d90fc0c27b514525"
+      url "https://github.com/acarmisc/finna-cli/releases/download/v0.1.1/finna_0.1.1_darwin_amd64.tar.gz"
+      sha256 "3acaa6b965c1181cc7c642eaf5a90b13b4101aab9bfcf64af33f11da6d218da9"
 
       define_method(:install) do
         bin.install "finna"
@@ -19,8 +19,8 @@ class FinnaCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/acarmisc/finna-cli/releases/download/v0.1.0/finna_0.1.0_darwin_arm64.tar.gz"
-      sha256 "d0170cd8d476f8836517ed92039d4ea683ed660f29a33b9044c28b9084723cd5"
+      url "https://github.com/acarmisc/finna-cli/releases/download/v0.1.1/finna_0.1.1_darwin_arm64.tar.gz"
+      sha256 "7143d70f57966615754a9669a618815000958e3b60a647733dd0f64998fcabf2"
 
       define_method(:install) do
         bin.install "finna"
@@ -31,16 +31,16 @@ class FinnaCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/acarmisc/finna-cli/releases/download/v0.1.0/finna_0.1.0_linux_amd64.tar.gz"
-      sha256 "78ddaa0d2b349457d562f890aabec5dcec5b18588f49e3e38acb780bf61a3aa4"
+      url "https://github.com/acarmisc/finna-cli/releases/download/v0.1.1/finna_0.1.1_linux_amd64.tar.gz"
+      sha256 "a8607536f1ba37929f5b5ee029850783b10138befc7d287ba7e2728ddf889080"
       define_method(:install) do
         bin.install "finna"
         generate_completions_from_executable(bin/"finna", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/acarmisc/finna-cli/releases/download/v0.1.0/finna_0.1.0_linux_arm64.tar.gz"
-      sha256 "58fb6da1ee7b1fada1ee8a3f25b78e8f430e3a8bd188efc9952bd9ffa2faab0e"
+      url "https://github.com/acarmisc/finna-cli/releases/download/v0.1.1/finna_0.1.1_linux_arm64.tar.gz"
+      sha256 "5abbef980b630beff9602bda7e4585976f755f5dbd5dda760683e973b658d8c0"
       define_method(:install) do
         bin.install "finna"
         generate_completions_from_executable(bin/"finna", "completion")
